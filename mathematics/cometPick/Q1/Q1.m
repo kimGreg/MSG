@@ -1,4 +1,5 @@
 clear all, clc
+addpath('../');
 
 s = [1 1 2 2 3 4 5];
 cnt = 0;

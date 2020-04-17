@@ -1,3 +1,6 @@
+clear all, clc
+addpath('../');
+
 arr = [0 0 0 0 0 1 1 1 1]; % 0:odd 1:even
 cnt = 0;
 
