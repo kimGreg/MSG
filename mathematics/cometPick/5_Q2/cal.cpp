@@ -2,7 +2,9 @@
 using namespace std;
 using ll = long long;
 
-ll d[15][15]; // d[i][j] = number of cases when the number of multiples of 3 is i and the number of non-multiples of 3 is j
+const int A = 5, B = 10;
+
+ll d[A+2][B+2]; // d[i][j] = number of cases when the number of multiples of 3 is i and the number of non-multiples of 3 is j
 
 ll gcd(ll a, ll b){ // Euclidean algorithm
 	while(a){
@@ -21,10 +23,10 @@ ll fact(int k){  // factorial
 
 void fill_table(){
 	d[0][0] = 1;
-	for(int i=0; i<5; i++){
-		for(int j=0; j<10; j++){
-			d[i+1][j] += d[i][j]*(5-i);
-			d[i][j+1] += d[i][j]*(10-j);
+	for(int i=0; i<A; i++){
+		for(int j=0; j<B; j++){
+			d[i+1][j] += d[i][j]*(A-i);
+			d[i][j+1] += d[i][j]*(B-j);
 		}
 	}
 }
@@ -32,11 +34,11 @@ void fill_table(){
 ll get_ans(){
 	ll a = 0, b = 0;
 	
-	for(int i=0; i<10; i++){
-		a += d[5][i] * fact(10-i); // multiply (10-i)! instade of (10-i)!/15!
+	for(int i=0; i<B; i++){
+		a += d[A][i] * fact(B-i); // multiply (10-i)! instade of (10-i)!/15!
 	}
-	for(int i=0; i<5; i++){
-		b += d[i][10] * fact(5-i); // multiply (5-i)! instade of (5-i)!/15!
+	for(int i=0; i<A; i++){
+		b += d[i][B] * fact(A-i); // multiply (5-i)! instade of (5-i)!/15!
 	}
 
 	ll total = a+b;
