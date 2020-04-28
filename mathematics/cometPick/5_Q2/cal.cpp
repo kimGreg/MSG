@@ -40,9 +40,9 @@ ll get_ans(){
 	}
 
 	ll total = a+b;
-	ll gcd_kq = gcd(a, total);
+	ll Gcd = gcd(a, total);
 
-	return a/gcd_kq + total/gcd_kq;
+	return a/Gcd + total/Gcd; // a/Gcd : numerator, total/Gcd : denominator
 }
 
 int main(){
