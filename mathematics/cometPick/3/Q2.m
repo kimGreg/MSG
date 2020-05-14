@@ -17,5 +17,5 @@ while true
     end
 end
 
-Answer = fopen('answer.txt', 'w');
+Answer = fopen('answer2.txt', 'w');
 fprintf(Answer, sprintf("ans : %d", cnt));
