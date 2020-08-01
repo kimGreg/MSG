@@ -6,6 +6,8 @@
 
 가장 기본적인 미분방정식 만으로 풀이함
 
+코드는 [ekman_spiral](/earthScience/Ekman/ekman_spiral.m)
+
 > **Note** : matlab으로 편미분 방정식을 푸는 방법을 정확하게 몰라서 시간에 의존적으로 정상상태가 아닌 상태가 나옴....
 
 ## 결과
